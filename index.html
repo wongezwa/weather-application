@@ -10,7 +10,8 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <style></style>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -19,10 +20,48 @@
           <form class="search-form" id="search-form">
             <div class="row">
               <div class="col-7">
-                <!-- Your form elements go here -->
+                <input
+                  type="search"
+                  placeholder="🔍 Enter city..."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                  class="form-control shadow-sm"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="form-control btn btn-primary shadow-sm"
+                  id="search-button"
+                />
               </div>
             </div>
           </form>
+          <br />
+          <br />
+          <h1 class="city" id="city">Cradock</h1>
+          <h2>
+            <span class="current-temp" id="temp">17</span>
+            <span class="degrees">°C</span>
+          </h2>
+          <p class="date-time"></p>
+
+          <ul>
+            <li>Precipitation: 24%</li>
+            <li>Humidity: 85%</li>
+            <li>Wind: 27 km/h</li>
+          </ul>
+          <br />
+          <div class="row">
+            <div class="col-md-2">Tue<br />⛅<br />20°</div>
+            <div class="col-md-2">Wed<br />🌧<br />22°</div>
+            <div class="col-md-2">Thu<br />⛅<br />21°</div>
+            <div class="col-md-2">Fri<br />🌦<br />18°</div>
+            <div class="col-md-2">Sat<br />⛅<br />20°</div>
+            <div class="col-md-2">Sun<br />🌧<br />18°</div>
+          </div>
         </div>
       </div>
     </div>
