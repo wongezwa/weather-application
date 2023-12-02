@@ -3,67 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather-App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="card mx-auto" style="width: 60% border">
-        <div class="card-body">
-          <form class="search-form" id="search-form">
-            <div class="row">
-              <div class="col-7">
-                <input
-                  type="search"
-                  placeholder="🔍 Enter city..."
-                  autofocus="on"
-                  autocomplete="off"
-                  id="city-input"
-                  class="form-control shadow-sm"
-                />
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <title>My weather application</title>
+      </head>
+      <body>
+        <div class="weather-app">
+          <header>
+            <form id="search-form">
+              <input
+                type="search"
+                placeholder="Enter a city🔎.."
+                required
+                class="search-input"
+                id="search-input"
+              />
+              <input type="submit" value="Search" class="search-button" />
+            </form>
+          </header>
+          <main>
+            <div class="current-weather">
+              <div>
+                <h1 class="current-city" id="current-city">Paris</h1>
+                <p class="current-details">
+                  <span id="current-date"></span>, moderate rain <br />
+                  Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+                </p>
               </div>
-              <div class="col-3">
-                <input
-                  type="submit"
-                  value="Search"
-                  class="form-control btn btn-primary shadow-sm"
-                  id="search-button"
-                />
+              <div class="current-temperature">
+                <span class="current-temperature-icon">☀️</span
+                ><span class="current-temperature-value">24</span
+                ><span class="current-temperature-unit">°C</span>
               </div>
             </div>
-          </form>
-          <br />
-          <br />
-          <h1 class="city" id="city">Cradock</h1>
-          <h2>
-            <span class="current-temp" id="temp">17</span>
-            <span class="degrees">°C</span>
-          </h2>
-          <p class="date-time"></p>
-
-          <ul>
-            <li>Precipitation: 24%</li>
-            <li>Humidity: 85%</li>
-            <li>Wind: 27 km/h</li>
-          </ul>
-          <br />
-          <div class="row">
-            <div class="col-md-2">Tue<br />⛅<br />20°</div>
-            <div class="col-md-2">Wed<br />🌧<br />22°</div>
-            <div class="col-md-2">Thu<br />⛅<br />21°</div>
-            <div class="col-md-2">Fri<br />🌦<br />18°</div>
-            <div class="col-md-2">Sat<br />⛅<br />20°</div>
-            <div class="col-md-2">Sun<br />🌧<br />18°</div>
-          </div>
+          </main>
+          <footer>
+            <p>
+              This project was coded by
+              <a href="#" target="_blank">Wongezwa August</a> and is
+              <a href="#" target="_blank"> on GitHub</a> and
+              <a href="#" target="_blank">hosted on Netlify</a>
+            </p>
+          </footer>
         </div>
-      </div>
-    </div>
-  </body>
+      </body>
+      <script src="index.js"></script>
+    </html>
+  </head>
 </html>
