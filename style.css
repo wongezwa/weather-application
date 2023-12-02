@@ -22,7 +22,7 @@ div {
 }
 
 .btn-primary:hover {
-  background-color: goldenrod;
+  background-color: blue;
 }
 .btn-secondary:hover {
   background-color: rgb(199, 7, 125);
